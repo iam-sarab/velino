@@ -102,13 +102,11 @@ main:focus{outline:none}
 .hdr-icons{justify-self:end;display:flex;align-items:center;gap:clamp(0px,.5vw,10px)}
 .icon-btn{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;transition:background-color .2s}
 .icon-btn:hover{background:var(--paper)}
-.icon-btn[aria-current="page"] .ic{stroke-width:2.1}
+.icon-btn[aria-current="page"]{background:var(--paper)}
 .badge{position:absolute;top:4px;right:1px;min-width:18px;height:18px;padding-inline:4px;border-radius:99px;background:var(--terra);color:var(--white);font-size:11px;font-weight:700;line-height:18px;text-align:center;font-variant-numeric:tabular-nums}
 .badge.bump{animation:bump .45s var(--ease)}
 @keyframes bump{40%{transform:scale(1.35)}}
-.burger{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;margin-left:clamp(0px,1.2vw,22px)}
-.burger span{display:block;width:26px;height:4px;border-radius:4px;background:var(--ink);transition:width .25s var(--ease)}
-.burger:hover span:nth-child(2){width:18px}
+.burger{margin-left:clamp(0px,1.2vw,22px)}
 @media (max-width:900px){
   .hdr{grid-template-columns:auto 1fr}
   .hdr-nav{display:none}
