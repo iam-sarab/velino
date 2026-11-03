@@ -1,1122 +1,162 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velino — Confidence Without Compromise</title>
-
-  <!-- Google Fonts: Poppins + Satoshi + Material Symbols -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            /* 60% BEIGE — Primary Luxury Canvas */
-            "beige-bg": "#F5EFE6",
-            "beige-card": "#FAF6F0",
-            "beige-tint": "#EBE1D3",
-            "beige-studio": "#EFE7DA",
-            "beige-border": "#DFD2BF",
-            "espresso": "#261811",
-            "warm-muted": "#6B564B",
-
-            /* 30% TERRACOTTA — Secondary Brand & Structural Shade */
-            "terracotta": "#B85038",
-            "terracotta-dark": "#8F3926",
-            "terracotta-soft": "#F3E1DA",
-
-            /* 10% GREEN — Positive Trust & Highlights */
-            "forest": "#1F6E43",
-            "forest-dark": "#165231",
-            "forest-soft": "#E1F0E7"
-          },
-          fontFamily: {
-            head: ["Poppins", "Satoshi", "sans-serif"],
-            body: ["Satoshi", "Poppins", "sans-serif"]
-          }
-        }
-      }
-    };
-  </script>
-
-  <style>
-    body {
-      background-color: #F5EFE6;
-      color: #261811;
-      font-family: 'Satoshi', 'Poppins', sans-serif;
-      margin: 0;
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4, .font-head {
-      font-family: 'Poppins', sans-serif;
-    }
-    .ambient-shadow {
-      box-shadow: 0 14px 34px -8px rgba(143, 57, 38, 0.10);
-    }
-    .card-hover {
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -12px rgba(143, 57, 38, 0.15);
-    }
-    @keyframes scanline {
-      0% { top: 8%; }
-      50% { top: 88%; }
-      100% { top: 8%; }
-    }
-    .qr-scanner-line {
-      position: absolute;
-      left: 8%;
-      right: 8%;
-      height: 2px;
-      background: #1F6E43;
-      box-shadow: 0 0 10px 2px rgba(31, 110, 67, 0.65);
-      animation: scanline 2.4s ease-in-out infinite;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Velino</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Velino makes women's occasion footwear that is fashionable and comfortable at affordable prices. Confidence without compromise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
 
-<body class="bg-beige-bg text-espresso antialiased selection:bg-terracotta selection:text-white">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="logo" viewBox="0 0 3411 1008"><path fill="currentColor" fill-rule="evenodd" d="M 1683 1 C 1683 2, 1682 4, 1680 4 C 1678 5, 1671 9, 1664 13 C 1657 17, 1649 21, 1647 23 C 1645 24, 1640 27, 1637 29 C 1633 31, 1627 35, 1623 37 C 1619 39, 1615 41, 1614 42 C 1613 43, 1600 50, 1590 56 C 1588 57, 1583 60, 1580 62 C 1576 64, 1570 68, 1566 70 C 1561 73, 1557 75, 1556 76 C 1554 77, 1540 85, 1533 89 C 1531 90, 1527 92, 1525 94 C 1523 95, 1516 99, 1509 103 C 1502 107, 1496 110, 1496 111 C 1495 227, 1496 834, 1497 840 C 1501 874, 1515 908, 1537 936 C 1547 948, 1565 965, 1574 971 C 1575 972, 1579 974, 1582 976 C 1599 989, 1635 1002, 1659 1005 C 1664 1006, 1668 1006, 1668 1007 C 1668 1008, 1672 1008, 1676 1008 C 1684 1008, 1685 1008, 1686 1005 C 1688 1001, 1689 6, 1687 4 C 1686 3, 1685 2, 1685 1 C 1685 1, 1685 0, 1684 0 C 1683 0, 1683 1, 1683 1 M 1859 96 C 1832 100, 1804 118, 1791 141 C 1786 150, 1785 152, 1783 159 C 1769 199, 1781 240, 1814 267 C 1820 271, 1837 281, 1840 281 C 1841 281, 1844 282, 1847 283 C 1867 290, 1898 287, 1917 276 C 1919 275, 1922 273, 1924 273 C 1925 272, 1927 270, 1930 269 C 1968 240, 1980 189, 1958 147 C 1954 137, 1948 130, 1937 120 C 1929 112, 1927 111, 1916 105 C 1900 97, 1878 93, 1859 96 M 3 254 C 3 255, 4 258, 5 260 C 7 263, 9 266, 10 269 C 11 271, 15 277, 18 282 C 22 289, 32 306, 43 326 C 46 330, 53 342, 55 347 C 56 349, 60 355, 63 360 C 67 367, 81 391, 89 405 C 90 407, 92 411, 94 415 C 96 418, 99 422, 99 423 C 100 424, 103 429, 106 434 C 108 439, 113 446, 115 450 C 117 454, 119 458, 120 459 C 121 460, 125 468, 134 483 C 135 485, 137 489, 139 493 C 141 496, 144 500, 144 501 C 145 502, 148 507, 151 512 C 153 517, 158 524, 160 528 C 162 532, 164 536, 165 537 C 166 538, 170 546, 179 561 C 180 563, 182 567, 184 570 C 186 573, 192 585, 199 595 C 205 606, 210 615, 211 616 C 212 618, 221 633, 224 639 C 226 643, 229 648, 232 653 C 232 654, 238 663, 244 673 C 250 684, 255 693, 256 694 C 256 695, 263 707, 268 716 C 269 718, 273 724, 276 729 C 284 743, 299 769, 302 775 C 304 778, 308 785, 311 791 C 320 806, 335 832, 337 836 C 338 838, 341 843, 344 848 C 347 852, 349 856, 349 856 C 349 857, 351 861, 354 866 C 359 874, 364 883, 372 896 C 374 900, 376 903, 377 904 C 377 905, 379 909, 382 913 C 384 916, 386 921, 387 923 C 389 925, 394 934, 399 943 C 404 952, 409 960, 410 961 C 410 962, 412 966, 414 969 C 416 973, 420 979, 422 983 C 424 986, 426 990, 427 991 C 428 995, 437 1008, 438 1008 C 438 1008, 440 1005, 441 1002 C 443 999, 447 993, 450 988 C 453 983, 456 977, 457 975 C 461 967, 468 956, 470 953 C 471 951, 474 945, 477 941 C 480 936, 482 931, 483 930 C 483 929, 488 920, 494 911 C 500 901, 506 890, 508 887 C 510 883, 513 878, 514 876 C 516 874, 519 868, 521 864 C 523 860, 526 856, 527 854 C 537 836, 539 832, 540 831 C 540 830, 545 821, 551 812 C 557 802, 563 791, 565 787 C 570 779, 570 780, 564 769 C 561 764, 556 757, 554 753 C 552 749, 550 745, 549 744 C 548 743, 546 738, 543 734 C 540 729, 537 723, 536 721 C 535 719, 532 715, 530 712 C 528 708, 525 702, 522 697 C 520 693, 515 684, 511 678 C 507 672, 504 666, 503 665 C 502 663, 494 649, 490 642 C 488 638, 485 633, 482 628 C 482 627, 476 618, 470 608 C 464 597, 459 588, 458 587 C 458 586, 451 574, 446 565 C 445 563, 441 557, 438 553 C 434 545, 424 528, 413 508 C 410 504, 403 492, 401 487 C 400 485, 396 479, 393 475 C 389 467, 379 450, 368 430 C 364 424, 358 412, 355 408 C 354 406, 351 401, 349 398 C 347 394, 343 388, 341 384 C 339 380, 337 376, 336 375 C 335 374, 331 366, 322 352 C 321 349, 319 345, 317 342 C 315 338, 312 334, 312 333 C 311 332, 308 327, 305 322 C 303 317, 298 310, 296 306 C 294 302, 292 298, 291 297 C 290 295, 280 278, 273 266 C 270 260, 266 254, 265 253 C 264 252, 205 252, 134 252 C 5 252, 4 252, 3 254 M 653 253 C 652 253, 652 338, 652 441 L 652 629 655 629 C 657 629, 658 627, 660 623 C 664 616, 674 599, 675 597 C 676 596, 678 592, 680 588 C 682 584, 686 578, 688 575 C 690 571, 693 566, 694 564 C 696 562, 699 556, 701 552 C 703 548, 706 544, 707 542 C 717 524, 719 520, 720 519 C 721 518, 723 514, 725 510 C 727 506, 731 500, 733 497 C 735 493, 738 488, 739 486 C 742 481, 749 469, 752 464 C 753 462, 756 456, 759 452 C 762 447, 764 442, 765 441 C 766 440, 768 436, 770 432 C 772 428, 776 422, 778 419 C 780 415, 783 410, 784 408 C 787 404, 793 392, 797 386 C 808 366, 818 349, 822 342 C 825 337, 829 331, 830 329 C 833 323, 840 311, 842 308 C 863 272, 872 255, 872 254 C 872 252, 866 252, 763 252 C 703 252, 653 252, 653 253 M 2067 377 C 2064 377, 2061 378, 2060 378 C 2059 379, 2059 443, 2059 691 C 2059 995, 2059 1004, 2061 1006 L 2063 1008 2156 1008 C 2240 1008, 2249 1008, 2249 1006 C 2250 1006, 2250 936, 2250 851 C 2250 688, 2250 678, 2255 662 C 2262 635, 2276 613, 2297 596 C 2303 591, 2312 585, 2314 585 C 2314 585, 2315 584, 2317 583 C 2322 580, 2336 575, 2350 571 C 2361 569, 2387 569, 2399 571 C 2446 582, 2483 617, 2494 664 C 2497 676, 2497 696, 2497 848 C 2497 999, 2497 1004, 2499 1006 L 2501 1008 2594 1008 L 2687 1008 2688 1005 C 2689 1003, 2689 961, 2689 832 L 2688 663 2686 647 C 2677 595, 2658 547, 2632 511 C 2630 508, 2626 503, 2624 501 C 2614 486, 2584 456, 2566 442 C 2558 436, 2542 425, 2540 424 C 2538 423, 2535 422, 2533 420 C 2526 416, 2498 402, 2497 402 C 2496 402, 2494 401, 2491 400 C 2485 397, 2469 391, 2464 390 C 2462 390, 2457 388, 2453 387 C 2434 382, 2411 378, 2390 377 C 2373 377, 2073 376, 2067 377 M 1068 378 C 973 386, 895 429, 839 503 C 826 519, 816 537, 803 563 C 793 585, 785 613, 779 645 C 776 661, 775 690, 777 692 C 779 695, 1402 695, 1404 692 C 1406 690, 1405 659, 1402 646 C 1397 618, 1395 611, 1389 594 C 1385 581, 1384 576, 1381 571 C 1379 565, 1371 549, 1370 546 C 1369 545, 1367 541, 1365 538 C 1341 492, 1294 445, 1249 419 C 1245 417, 1241 415, 1240 414 C 1238 414, 1236 413, 1235 412 C 1234 411, 1230 409, 1226 408 C 1184 388, 1143 378, 1096 378 C 1083 377, 1070 377, 1068 378 M 1779 379 C 1777 381, 1776 823, 1778 836 C 1784 881, 1800 915, 1828 946 C 1834 953, 1835 954, 1841 960 C 1845 962, 1849 966, 1851 968 C 1853 970, 1855 971, 1855 971 C 1856 971, 1860 973, 1864 977 C 1885 991, 1918 1002, 1944 1005 C 1947 1006, 1950 1007, 1950 1007 C 1950 1008, 1954 1008, 1958 1008 L 1967 1008 1968 1004 C 1969 999, 1969 568, 1968 550 C 1963 494, 1933 442, 1887 410 C 1859 392, 1835 383, 1802 379 C 1786 377, 1781 377, 1779 379 M 3068 378 C 3047 380, 3030 383, 3007 389 C 2991 394, 2959 406, 2947 413 C 2933 421, 2907 438, 2893 449 C 2871 467, 2839 504, 2828 524 C 2827 525, 2825 529, 2823 532 C 2808 555, 2792 598, 2786 628 C 2778 665, 2777 713, 2783 742 C 2783 744, 2785 751, 2786 757 C 2788 768, 2788 769, 2792 781 C 2810 843, 2846 897, 2899 939 C 2919 955, 2952 975, 2973 983 C 2989 989, 2996 991, 3009 995 C 3025 1000, 3049 1004, 3066 1006 C 3071 1006, 3074 1007, 3075 1007 C 3075 1008, 3113 1008, 3115 1007 C 3115 1007, 3121 1006, 3127 1005 C 3133 1004, 3144 1003, 3150 1002 C 3156 1001, 3163 999, 3165 999 C 3168 999, 3172 997, 3175 997 C 3177 996, 3185 993, 3193 991 C 3200 989, 3208 985, 3212 984 C 3215 982, 3218 981, 3219 981 C 3220 981, 3241 971, 3248 967 C 3250 965, 3254 963, 3255 963 C 3256 962, 3259 960, 3261 959 C 3263 958, 3265 956, 3267 955 C 3283 946, 3320 913, 3337 892 C 3340 888, 3345 882, 3348 878 C 3351 875, 3353 872, 3353 872 C 3353 871, 3355 867, 3358 863 C 3368 848, 3379 826, 3385 812 C 3386 809, 3388 805, 3388 804 C 3391 798, 3399 771, 3400 764 C 3401 759, 3403 754, 3403 752 C 3404 748, 3406 732, 3408 721 C 3409 712, 3408 667, 3407 659 C 3407 655, 3406 648, 3405 644 C 3404 635, 3403 632, 3399 614 C 3395 600, 3392 589, 3391 588 C 3390 587, 3390 586, 3390 585 C 3390 583, 3390 582, 3389 581 C 3389 581, 3387 576, 3385 571 C 3380 560, 3369 537, 3362 526 C 3359 522, 3357 519, 3357 518 C 3357 518, 3355 516, 3353 513 C 3351 511, 3347 505, 3344 501 C 3329 480, 3306 458, 3285 442 C 3281 439, 3276 435, 3273 433 C 3262 425, 3221 402, 3217 402 C 3216 402, 3214 401, 3211 400 C 3201 395, 3176 387, 3159 384 C 3136 379, 3091 376, 3068 378 M 1075 570 C 1069 571, 1065 572, 1053 575 C 1051 575, 1048 576, 1046 577 C 1045 578, 1043 579, 1042 579 C 1041 579, 1037 581, 1033 584 C 1028 586, 1023 589, 1022 590 C 1018 592, 1004 605, 997 613 C 987 624, 973 650, 973 657 L 973 659 1091 659 C 1184 659, 1208 659, 1208 658 C 1208 649, 1195 625, 1184 613 C 1171 598, 1161 590, 1147 583 C 1134 577, 1131 575, 1123 574 C 1119 573, 1114 571, 1113 571 C 1108 570, 1083 569, 1075 570 M 3080 570 C 3018 577, 2971 630, 2971 692 C 2971 755, 3020 809, 3083 814 C 3133 818, 3179 794, 3202 750 C 3219 719, 3221 683, 3209 650 C 3190 596, 3135 563, 3080 570 M 777 723 C 776 726, 784 768, 790 786 C 799 816, 820 858, 835 876 C 836 878, 838 880, 838 881 C 838 881, 839 883, 841 884 C 842 885, 845 889, 848 893 C 861 910, 893 939, 913 952 C 927 961, 940 969, 941 969 C 941 969, 944 970, 947 972 C 970 986, 1016 1000, 1053 1005 C 1059 1005, 1066 1006, 1067 1007 C 1070 1008, 1112 1008, 1116 1007 C 1117 1006, 1124 1005, 1130 1005 C 1155 1001, 1174 997, 1197 988 C 1208 984, 1224 978, 1228 975 C 1230 975, 1234 972, 1238 970 C 1249 964, 1275 948, 1278 945 C 1278 945, 1281 943, 1283 941 C 1290 936, 1290 937, 1303 925 C 1318 910, 1329 898, 1333 893 C 1334 891, 1336 888, 1338 887 C 1341 883, 1352 868, 1356 861 C 1367 844, 1371 836, 1377 823 C 1379 817, 1379 817, 1377 817 C 1376 817, 1371 820, 1366 825 C 1356 833, 1342 844, 1335 849 C 1323 855, 1320 857, 1315 860 C 1312 861, 1307 863, 1305 865 C 1287 874, 1253 883, 1229 885 C 1195 888, 1163 885, 1131 874 C 1115 869, 1115 869, 1098 861 C 1046 836, 998 784, 979 732 C 978 728, 976 724, 975 723 C 973 720, 778 720, 777 723"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="M15.8 15.8 21.5 21.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.6s-8.6-5-8.6-11.2A4.8 4.8 0 0 1 12 6.6a4.8 4.8 0 0 1 8.6 2.8c0 6.2-8.6 11.2-8.6 11.2z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1.2 13.2H3.800z"/><path d="M8.5 10.500V6.500a3.5 3.5 0 0 1 7 0v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5.5 5.500l13 13M18.5 5.500l-13 13"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3.5 12h17M14 5.500l6.5 6.5-6.5 6.5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M20.5 12h-17M10 5.5 3.5 12l6.5 6.5"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9.500l6 6 6-6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.500l5 5 10-11"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.500v13l10.5-6.500z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M18 7h2M4 17h2M11 17h9"/><circle cx="15.5" cy="7" r="2.5"/><circle cx="8.5" cy="17" r="2.5"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.5 6.500h12v10h-12zM14.5 10h4l3 3.500v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8.500h15M15 4.500l4 4-4 4M20 15.500H5M9 11.500l-4 4 4 4"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.4-4.100A8 8 0 1 1 8.5 19z"/></symbol>
+  <symbol id="i-feather" viewBox="0 0 24 24"><path d="M4 20c5-1 9-4 11.5-8.500L19 5c-5 .5-9 3-11.5 7.500S4 20 4 20zM8.5 15.500h6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M3 9l9-4.500L21 9l-9 4.500zM3 14.500l9 4.5 9-4.5"/></symbol>
+  <symbol id="i-grip" viewBox="0 0 24 24"><path d="M3 17c3-1 5-1 9-1s6 0 9 1M5 13.500v.01M9.5 12v.01M14.5 12v.01M19 13.500v.01M7 8.500v.01M12 7.500v.01M17 8.500v.01"/></symbol>
+  <symbol id="i-arch" viewBox="0 0 24 24"><path d="M2.5 18c5 0 5.5-8 9.5-8s4.5 8 9.5 8"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.500M12 7.500v.01"/></symbol>
+</svg>
 
-  <!-- =====================================================================
-       HEADER (Velino Logo + Our Story, Products, Cart, Profile)
-       ===================================================================== -->
-  <header class="sticky top-0 left-0 w-full z-40 bg-beige-bg/95 backdrop-blur-xl border-b border-beige-border">
-    <div class="h-20 max-w-[1400px] mx-auto px-5 md:px-12 flex items-center justify-between">
-      
-      <!-- Custom Uploaded VELINO Logo -->
-      <a href="#" class="flex items-center group" aria-label="Velino Home">
-        <svg class="h-9 md:h-10 w-auto text-espresso group-hover:text-terracotta transition-colors" viewBox="0 0 330 95" fill="currentColor">
-          <polygon points="4,22 28,22 57,74 45,92" />
-          <polygon points="62,22 86,22 62,65 62,22" />
-          <path d="M82,63 L128,63 L128,58 L99,58 C100,50 106,46 114,46 C122,46 127,50 128,58 L147,58 C147,43 134,34 114,34 C94,34 81,46 81,63 C81,81 95,92 115,92 C131,92 142,84 146,73 L128,73 C125,78 121,80 115,80 C105,80 99,75 98,67 L81,67 Z" />
-          <polygon points="156,14 176,4 176,90 156,90" />
-          <circle cx="198" cy="18" r="10" />
-          <path d="M188,35 L196,35 C204,35 208,39 208,47 L208,90 L188,90 Z" />
-          <path d="M218,35 L236,35 L236,43 C240,37 247,34 256,34 C270,34 279,43 279,58 L279,90 L259,90 L259,61 C259,52 254,47 247,47 C240,47 236,52 236,61 L236,90 L218,90 Z" />
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M304,34 C321,34 330,46 330,63 C330,80 321,92 304,92 C287,92 278,80 278,63 C278,46 287,34 304,34 Z M304,48 C296,48 291,54 291,63 C291,72 296,78 304,78 C312,78 317,72 317,63 C317,54 312,48 304,48 Z" />
-        </svg>
-      </a>
+<a class="skip" href="#content" data-skip>Skip to content</a>
 
-      <!-- 4 Header Options: Our Story | Products | Cart (No money shown) | Profile -->
-      <nav class="flex items-center gap-4 sm:gap-8">
-        <a href="#our-story" class="font-head text-sm font-medium text-espresso hover:text-terracotta transition-colors">
-          Our Story
-        </a>
-        <a href="#festive-catalog" class="font-head text-sm font-medium text-espresso hover:text-terracotta transition-colors">
-          Products
-        </a>
-        <button onclick="toggleCartDrawer(true)" type="button" class="inline-flex items-center gap-2 bg-terracotta text-white hover:bg-terracotta-dark px-4 py-2.5 rounded-full font-head text-sm font-medium transition-all shadow-sm">
-          <span class="material-symbols-outlined text-[19px]">shopping_bag</span>
-          <span>Cart</span>
-        </button>
-        <button onclick="toggleProfileModal(true)" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-beige-card border border-beige-border text-espresso hover:border-terracotta font-head text-sm font-medium transition-all">
-          <span class="material-symbols-outlined text-[19px] text-terracotta">person</span>
-          <span class="hidden sm:inline">Profile</span>
-        </button>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="hdr-logo" href="#home" aria-label="Velino home"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg></a>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#shop" data-nav="shop">Shop</a>
+      <a href="#new-arrivals" data-nav="new-arrivals">New Arrivals</a>
+      <a href="#about" data-nav="about">About</a>
+    </nav>
+    <div class="hdr-icons">
+      <button class="icon-btn" type="button" data-open-dialog="search-dlg" aria-label="Search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <a class="icon-btn" href="#wishlist" data-nav="wishlist" aria-label="Wishlist"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="badge" id="wish-count" hidden></span></a>
+      <a class="icon-btn" href="#cart" data-nav="cart" aria-label="Bag"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg><span class="badge" id="cart-count" hidden></span></a>
+      <button class="icon-btn burger" type="button" data-open-dialog="menu-dlg" aria-label="Open menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="content" tabindex="-1"><div id="app"></div></main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <form class="foot-news" id="news-form" novalidate>
+        <h2>First look at every new style.</h2>
+        <div class="foot-news-row" id="news-fields">
+          <label class="sr-only" for="news-email">Email address</label>
+          <input id="news-email" name="email" type="email" autocomplete="email" placeholder="Your email address">
+          <button class="btn btn--light" type="submit">Sign up</button>
+        </div>
+        <p class="foot-news-msg" id="news-msg" role="status"></p>
+      </form>
+      <nav class="foot-col" aria-label="Shop links">
+        <h3>Shop</h3>
+        <a href="#shop">All styles</a>
+        <a href="#new-arrivals">New arrivals</a>
+        <a href="#shop-heels">Heels</a>
+        <a href="#shop-slingbacks">Slingbacks</a>
+        <a href="#shop-mules">Mules</a>
+        <a href="#shop-boots">Boots</a>
+        <a href="#shop-sandals">Sandals</a>
       </nav>
-
+      <nav class="foot-col" aria-label="Help links">
+        <h3>Help</h3>
+        <a href="#size-guide">Size guide</a>
+        <a href="#shipping-returns">Delivery and exchanges</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+      <nav class="foot-col" aria-label="Brand links">
+        <h3>Velino</h3>
+        <a href="#about">About us</a>
+        <a href="#wishlist">Wishlist</a>
+        <a href="#cart">Bag</a>
+      </nav>
     </div>
-  </header>
-
-  <!-- Toast Notification -->
-  <div id="cart-toast" class="fixed bottom-6 right-6 z-50 bg-espresso text-beige-card px-5 py-3.5 rounded-2xl shadow-2xl border border-terracotta flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="w-7 h-7 rounded-full bg-forest text-white flex items-center justify-center font-bold text-sm">✓</div>
-    <div>
-      <p class="font-head font-semibold text-sm text-white">Added to Cart</p>
-      <p class="text-xs text-beige-tint" id="toast-item-desc">The Noor Zari Block Heel • Size 38</p>
-    </div>
-  </div>
-
-  <!-- =====================================================================
-       MAIN CONTENT
-       ===================================================================== -->
-  <main class="w-full">
-
-    <!-- SECTION 1: HERO (Green dispatch line & Noor Zari Block Heel card removed, flows straight to One Pair Endless Celebrations) -->
-    <section class="relative w-full bg-gradient-to-b from-beige-bg via-beige-card to-beige-bg py-14 lg:py-20 border-b border-beige-border overflow-hidden">
-      <div class="max-w-[1100px] mx-auto px-5 md:px-12 text-center flex flex-col items-center space-y-6">
-        <h1 class="font-head text-4xl sm:text-5xl lg:text-[58px] font-bold text-espresso tracking-tight leading-[1.1]">
-          Confidence Without Compromise.
-        </h1>
-        <p class="text-base sm:text-lg text-warm-muted max-w-2xl leading-relaxed">
-          Dance through the Sangeet, own the after-party. Handcrafted festive footwear engineered with 3-layer memory cushioning and broad Indian foot comfort—starting at ₹1,699.
-        </p>
-
-        <!-- CTA: "Join the Comfort" -->
-        <div class="pt-1">
-          <a href="#festive-catalog" class="inline-flex items-center justify-center gap-3 bg-terracotta text-white font-head font-semibold text-sm uppercase tracking-wider px-9 py-4 rounded-xl shadow-md hover:bg-terracotta-dark transition-all group">
-            <span>Join the Comfort</span>
-            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-lg">arrow_forward</span>
-          </a>
-        </div>
-
-        <!-- Rating & Cloud Lining Row (Green dispatch line removed) -->
-        <div class="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs">
-          <div class="flex items-center gap-1 bg-forest-soft text-forest px-3.5 py-1.5 rounded-full font-bold">
-            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-            <span>4.9 (2,400+ Brides &amp; Bridesmaids)</span>
-          </div>
-          <span class="flex items-center gap-1 text-espresso font-semibold">
-            <span class="material-symbols-outlined text-base text-forest">verified</span>
-            Zero-Bite Cloud Lining
-          </span>
-          <span class="text-warm-muted">•</span>
-          <span class="font-semibold text-espresso">Tailored for Indian Foot Anatomy</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: ONE PAIR, ENDLESS CELEBRATIONS (Working 3-Outfit Switcher) -->
-    <section class="w-full bg-beige-card py-16 lg:py-24 border-b border-beige-border">
-      <div class="max-w-[1400px] mx-auto px-5 md:px-12">
-        <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <h2 class="font-head text-3xl sm:text-4xl font-bold text-espresso">One Pair. Endless Celebrations.</h2>
-          <p class="text-sm sm:text-base text-warm-muted">
-            Click across the 3 celebration outfits below to see how one handcrafted Velino pair styles effortlessly across your entire festive wardrobe.
-          </p>
-        </div>
-
-        <div class="bg-beige-bg rounded-3xl p-6 lg:p-12 border border-beige-border ambient-shadow">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            <!-- Dynamic Lookbook Visual (100% Unobstructed Image that changes on tab click) -->
-            <div class="lg:col-span-6 flex justify-center">
-              <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-lg aspect-[3/4] bg-beige-studio border-2 border-terracotta/30">
-                <img
-                  class="w-full h-full object-cover transition-opacity duration-300"
-                  id="lookbook-hero-img"
-                  alt="Celebration Outfit with Velino Footwear"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4bO_ClJ9kLVOudmetn7_UVvotsd_N8fCPojT0UWXK67_PSaIsf8t9aI42JPOlnA0LHf3AzKNdZpu9N39tPbYytsB4PxHxIXKt2iFq1EsNRDwo-XOFLIkZQMbmGM0ozP4YKOgPvoe8gBq3mpH5a91t_NgENtYsLtuw6s-TYLkUAIWLTWhb_5xghdpYaLzb3NMTjsrqvnw7OrA3K2siKf-ZPR5WrUfHAY-yuY7XYVK-"
-                />
-              </div>
-            </div>
-
-            <!-- 3-Look Interactive Switcher -->
-            <div class="lg:col-span-6 flex flex-col justify-center space-y-8">
-              <div class="space-y-3">
-                <h3 class="font-head text-2xl sm:text-3xl font-bold text-espresso">
-                  Switch Celebration Look
-                </h3>
-                <p class="text-sm text-warm-muted leading-relaxed">
-                  Select any of the 3 celebration outfits below to preview how the footwear pairs with a Heavy Lehenga, a Silk Anarkali, and an Evening Cocktail look.
-                </p>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-                <button id="tab-lehenga" class="lookbook-tab-btn bg-terracotta text-white p-4 rounded-2xl text-left shadow-md transition-all cursor-pointer" onclick="setLookbookTab('lehenga', this)" type="button">
-                  <span class="material-symbols-outlined text-2xl mb-2 block">apparel</span>
-                  <span class="font-head text-sm font-bold block">Heavy Lehenga</span>
-                  <span class="sub-label text-[11px] opacity-90 block mt-0.5">Wedding &amp; Reception</span>
-                </button>
-                <button id="tab-anarkali" class="lookbook-tab-btn bg-beige-card text-espresso border border-beige-border p-4 rounded-2xl text-left hover:border-terracotta transition-all cursor-pointer" onclick="setLookbookTab('anarkali', this)" type="button">
-                  <span class="material-symbols-outlined text-2xl mb-2 block text-terracotta">flare</span>
-                  <span class="font-head text-sm font-bold block">Silk Anarkali</span>
-                  <span class="sub-label text-[11px] text-warm-muted block mt-0.5">Mehendi &amp; Puja</span>
-                </button>
-                <button id="tab-cocktail" class="lookbook-tab-btn bg-beige-card text-espresso border border-beige-border p-4 rounded-2xl text-left hover:border-terracotta transition-all cursor-pointer" onclick="setLookbookTab('cocktail', this)" type="button">
-                  <span class="material-symbols-outlined text-2xl mb-2 block text-terracotta">local_bar</span>
-                  <span class="font-head text-sm font-bold block">Cocktail Gown</span>
-                  <span class="sub-label text-[11px] text-warm-muted block mt-0.5">Sangeet &amp; After-Party</span>
-                </button>
-              </div>
-
-              <div class="flex flex-wrap gap-2.5">
-                <span class="bg-forest-soft text-forest text-xs font-bold px-3.5 py-1.5 rounded-full">✓ 6mm Ortho-Plush™ Cushion</span>
-                <span class="bg-forest-soft text-forest text-xs font-bold px-3.5 py-1.5 rounded-full">✓ Snag-Free Zari Weave</span>
-                <span class="bg-forest-soft text-forest text-xs font-bold px-3.5 py-1.5 rounded-full">✓ Wide Indian Toe Box</span>
-              </div>
-
-              <div class="pt-2">
-                <button class="w-full bg-terracotta text-white font-head font-semibold text-sm uppercase tracking-wider py-4 rounded-xl hover:bg-terracotta-dark shadow-md transition-all flex items-center justify-center gap-2.5" onclick="quickAddToCart('The Noor Zari Block Heel', 1899)" type="button">
-                  <span class="material-symbols-outlined text-lg">shopping_bag</span>
-                  <span>Add This Versatile Pair to Cart — ₹1,899</span>
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: PRODUCT CATALOG (Icon Filter Navigation, Whole Heel Visible) -->
-    <section class="w-full bg-beige-bg py-16 lg:py-24 border-b border-beige-border" id="festive-catalog">
-      <div class="max-w-[1400px] mx-auto px-5 md:px-12">
-        
-        <!-- Icon Navigation Filter Pills -->
-        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
-          <button class="catalog-filter-btn bg-terracotta text-white px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider transition-all inline-flex items-center gap-2 shadow-sm" onclick="filterCatalog('all', this)" type="button">
-            <span class="material-symbols-outlined text-[18px]">grid_view</span>
-            <span>All Styles (6)</span>
-          </button>
-          <button class="catalog-filter-btn bg-beige-card border border-beige-border text-espresso px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider hover:border-terracotta transition-all inline-flex items-center gap-2" onclick="filterCatalog('heels', this)" type="button">
-            <span class="material-symbols-outlined text-[18px] text-terracotta">spa</span>
-            <span>Cushioned Heels</span>
-          </button>
-          <button class="catalog-filter-btn bg-beige-card border border-beige-border text-espresso px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider hover:border-terracotta transition-all inline-flex items-center gap-2" onclick="filterCatalog('wedges', this)" type="button">
-            <span class="material-symbols-outlined text-[18px] text-terracotta">steps</span>
-            <span>Dance Wedges</span>
-          </button>
-          <button class="catalog-filter-btn bg-beige-card border border-beige-border text-espresso px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider hover:border-terracotta transition-all inline-flex items-center gap-2" onclick="filterCatalog('mules', this)" type="button">
-            <span class="material-symbols-outlined text-[18px] text-terracotta">flare</span>
-            <span>Festive Mules</span>
-          </button>
-          <button class="catalog-filter-btn bg-beige-card border border-beige-border text-espresso px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider hover:border-terracotta transition-all inline-flex items-center gap-2" onclick="filterCatalog('budget', this)" type="button">
-            <span class="material-symbols-outlined text-[18px] text-forest">sell</span>
-            <span>Under ₹1,999</span>
-          </button>
-        </div>
-
-        <!-- 6-Product Grid (Every Shoe & Heel 100% Uncropped inside Frame) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
-
-          <!-- CARD 1 -->
-          <div class="product-item group bg-beige-card rounded-2xl p-4 border border-beige-border card-hover flex flex-col justify-between" data-category="heels budget">
-            <div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E8DDD0] mb-4 flex items-center justify-center p-2">
-                <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="The Noor Zari Block Heel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYIVcHs_RRsF55a68WCFDE4rTbfJrpExopIUjgwq1bJ2uc1j5xfIChvrkYv5WAMNZa7I6gMyKbuv4lJJxKverf46wlzIlqI0L-UwzDSbwamWW21_HONdbYdY-ljXpgQJUdLiEZNz8Qtb5BG3rdfj6PPSA3M9oqizjhvQSWMULZ_lM9PKb9hfPJ_alO8c-Awu9c554gixfI1UDOGH3P9eCpnPmsR2Wa2rF-FDqhAs4_" />
-                <div class="absolute top-3 left-3 bg-terracotta text-white font-head text-[10px] px-2.5 py-1 rounded-md uppercase font-bold tracking-wider">Bestseller</div>
-              </div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-beige-tint text-espresso text-[10px] px-2 py-0.5 rounded font-bold uppercase">Anti-Blister Lining</span>
-                <span class="bg-forest-soft text-forest text-[10px] px-2 py-0.5 rounded font-bold uppercase">Wide Foot Friendly</span>
-              </div>
-              <h3 class="font-head text-lg text-espresso font-bold">The Noor Zari Block Heel</h3>
-              <p class="text-xs text-warm-muted mt-0.5">Champagne Gold • Cushioned Comfort Heel</p>
-              <div class="flex items-center gap-2 mt-2">
-                <span class="text-xs font-bold text-espresso">★ 4.9</span>
-                <span class="text-xs text-warm-muted">(890+ reviews)</span>
-                <span class="text-forest text-xs font-bold ml-auto">Comfort: 9.9/10</span>
-              </div>
-              <div class="flex items-baseline gap-2 mt-3">
-                <span class="font-head text-xl text-espresso font-bold">₹1,899</span>
-                <span class="text-xs text-warm-muted line-through">₹2,799</span>
-                <span class="text-xs text-forest font-bold">32% OFF</span>
-              </div>
-              <div class="mt-4">
-                <span class="text-[11px] font-head text-warm-muted uppercase font-bold block mb-1.5">Select Euro Size:</span>
-                <div class="flex items-center gap-1.5 size-chips">
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">36</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">37</button>
-                  <button class="w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected" onclick="selectSize(this)" type="button">38</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">39</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">40</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">41</button>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 pt-3">
-              <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2" onclick="quickAddToCart('The Noor Zari Block Heel', 1899)" type="button">
-                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="product-item group bg-beige-card rounded-2xl p-4 border border-beige-border card-hover flex flex-col justify-between" data-category="wedges">
-            <div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E8DDD0] mb-4 flex items-center justify-center p-2">
-                <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="The Sitara Pearl Wedge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eG-0VEkssKCms5B6I5VbpB90GQNgk0eHATdSbBTSgCUEUx7akyfYm_JWFv2v-jHMV_KnFFJuw9QTsbGPsjHwX2HaqZOiOtxHuTES9JahYz4PGR4fjD--4cZz_OKPPVuiAHEkmN07M8MZMyh9VUfwnj566ECxffXj0EwkpQq6zNP10wAnz6GHd2dCWgq2q37JfH7v-P-4TwoJbJsZrzyLNmhw0C-AclbW85OOzaeT" />
-                <div class="absolute top-3 left-3 bg-terracotta text-white font-head text-[10px] px-2.5 py-1 rounded-md uppercase font-bold tracking-wider">Sister of Bride Pick</div>
-              </div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-beige-tint text-espresso text-[10px] px-2 py-0.5 rounded font-bold uppercase">Arch-Support Core</span>
-                <span class="bg-forest-soft text-forest text-[10px] px-2 py-0.5 rounded font-bold uppercase">Rose Gold Pearl</span>
-              </div>
-              <h3 class="font-head text-lg text-espresso font-bold">The Sitara Pearl Wedge</h3>
-              <p class="text-xs text-warm-muted mt-0.5">Rose Gold • Zero-Incline Comfort Wedge</p>
-              <div class="flex items-center gap-2 mt-2">
-                <span class="text-xs font-bold text-espresso">★ 4.8</span>
-                <span class="text-xs text-warm-muted">(640+ reviews)</span>
-                <span class="text-forest text-xs font-bold ml-auto">Comfort: 9.9/10</span>
-              </div>
-              <div class="flex items-baseline gap-2 mt-3">
-                <span class="font-head text-xl text-espresso font-bold">₹2,199</span>
-                <span class="text-xs text-warm-muted line-through">₹3,199</span>
-                <span class="text-xs text-forest font-bold">31% OFF</span>
-              </div>
-              <div class="mt-4">
-                <span class="text-[11px] font-head text-warm-muted uppercase font-bold block mb-1.5">Select Euro Size:</span>
-                <div class="flex items-center gap-1.5 size-chips">
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">36</button>
-                  <button class="w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected" onclick="selectSize(this)" type="button">37</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">38</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">39</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">40</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">41</button>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 pt-3">
-              <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2" onclick="quickAddToCart('The Sitara Pearl Wedge', 2199)" type="button">
-                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="product-item group bg-beige-card rounded-2xl p-4 border border-beige-border card-hover flex flex-col justify-between" data-category="mules budget">
-            <div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E8DDD0] mb-4 flex items-center justify-center p-2">
-                <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="The Jharokha Kolhapuri Heel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8cBhg6nQGYRs4DpLypaqO8SAzG8c0MinS26_D6ewJgsOANCm3a9IyR3K9OA_dAdANEREhA39b-wFHXIC_pDPoCof8Nn32iPnDs74D02bs_ymqLyXfdGMlJw6tkAsy5KXWH6JLFP_4cPPchJOQGD0oLaWSGPDqi_ZGR8C-378XX7b_rCdDwlH_n2n3zoZHKTtmmFr-MejPm0rAqrY5ywO-E_i455jkXeo2MNk5YJwW" />
-                <div class="absolute top-3 left-3 bg-espresso text-beige-card font-head text-[10px] px-2.5 py-1 rounded-md uppercase font-bold tracking-wider">Festive Puja Pick</div>
-              </div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-beige-tint text-espresso text-[10px] px-2 py-0.5 rounded font-bold uppercase">Zero-Bite Toe Ring</span>
-                <span class="bg-forest-soft text-forest text-[10px] px-2 py-0.5 rounded font-bold uppercase">Under ₹1,999</span>
-              </div>
-              <h3 class="font-head text-lg text-espresso font-bold">The Jharokha Kolhapuri</h3>
-              <p class="text-xs text-warm-muted mt-0.5">Antique Brass • Cushioned Festive Block</p>
-              <div class="flex items-center gap-2 mt-2">
-                <span class="text-xs font-bold text-espresso">★ 4.9</span>
-                <span class="text-xs text-warm-muted">(410+ reviews)</span>
-                <span class="text-forest text-xs font-bold ml-auto">Comfort: 9.8/10</span>
-              </div>
-              <div class="flex items-baseline gap-2 mt-3">
-                <span class="font-head text-xl text-espresso font-bold">₹1,799</span>
-                <span class="text-xs text-warm-muted line-through">₹2,499</span>
-                <span class="text-xs text-forest font-bold">28% OFF</span>
-              </div>
-              <div class="mt-4">
-                <span class="text-[11px] font-head text-warm-muted uppercase font-bold block mb-1.5">Select Euro Size:</span>
-                <div class="flex items-center gap-1.5 size-chips">
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">36</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">37</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">38</button>
-                  <button class="w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected" onclick="selectSize(this)" type="button">39</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">40</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">41</button>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 pt-3">
-              <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2" onclick="quickAddToCart('The Jharokha Kolhapuri', 1799)" type="button">
-                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- CARD 4 -->
-          <div class="product-item group bg-beige-card rounded-2xl p-4 border border-beige-border card-hover flex flex-col justify-between" data-category="heels">
-            <div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E8DDD0] mb-4 flex items-center justify-center p-2">
-                <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="The Mehr Velvet Block Sandal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZe4bUrMDrQNZ3r_1qdBj9Le9FI3W-JxxA_C1GDm5h-1EWzKuar1tb714ukT1iAz3vkhTP8-7eE_nVq4_gZm8qXICUKb0cuOkkJfUwBUaLvcW8H8KWMPiutA_7HVwJ0jsL_Qq_8dt4pvAphAfmGSiKwQ-3-rODS6YCmDuPejlASJojnYq_b1erwVWTkpfbDmdsJdMZb8g7q7LUhjM9GDh4kS8_7ddgtS0k7KBU0eWc" />
-                <div class="absolute top-3 left-3 bg-terracotta text-white font-head text-[10px] px-2.5 py-1 rounded-md uppercase font-bold tracking-wider">Royal Velvet Edit</div>
-              </div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-beige-tint text-espresso text-[10px] px-2 py-0.5 rounded font-bold uppercase">Double Padded Strap</span>
-                <span class="bg-forest-soft text-forest text-[10px] px-2 py-0.5 rounded font-bold uppercase">Silk Velvet</span>
-              </div>
-              <h3 class="font-head text-lg text-espresso font-bold">The Mehr Velvet Sandal</h3>
-              <p class="text-xs text-warm-muted mt-0.5">Royal Velvet • Balanced Block Architecture</p>
-              <div class="flex items-center gap-2 mt-2">
-                <span class="text-xs font-bold text-espresso">★ 4.9</span>
-                <span class="text-xs text-warm-muted">(380+ reviews)</span>
-                <span class="text-forest text-xs font-bold ml-auto">Comfort: 9.9/10</span>
-              </div>
-              <div class="flex items-baseline gap-2 mt-3">
-                <span class="font-head text-xl text-espresso font-bold">₹2,299</span>
-                <span class="text-xs text-warm-muted line-through">₹3,499</span>
-                <span class="text-xs text-forest font-bold">34% OFF</span>
-              </div>
-              <div class="mt-4">
-                <span class="text-[11px] font-head text-warm-muted uppercase font-bold block mb-1.5">Select Euro Size:</span>
-                <div class="flex items-center gap-1.5 size-chips">
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">36</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">37</button>
-                  <button class="w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected" onclick="selectSize(this)" type="button">38</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">39</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">40</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">41</button>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 pt-3">
-              <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2" onclick="quickAddToCart('The Mehr Velvet Sandal', 2299)" type="button">
-                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- CARD 5 -->
-          <div class="product-item group bg-beige-card rounded-2xl p-4 border border-beige-border card-hover flex flex-col justify-between" data-category="mules budget">
-            <div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E8DDD0] mb-4 flex items-center justify-center p-2">
-                <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="The Chandni Metallic Mule" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMzvdP4fVE_d8qHbex8uAzyJVQyRQHexDpbEjt14NGWNA05G6aGEqCuNdEqisrbRVQZxpt1jsKloedL0MPdJUl_eXF9AEaXHcpDu61mpbx0sfNfTeLLIdp_eUExWK9NWyKJ8gSi8a_F8QCtszAv_onA85Jrq5BHSUuLz0nD24ZOFH-fj_lg9xrYBqD3pzM3zse_urRBrukwAihhvfRIjFhZtoSf5LMGRU32cGaoVVT" />
-                <div class="absolute top-3 left-3 bg-forest text-white font-head text-[10px] px-2.5 py-1 rounded-md uppercase font-bold tracking-wider">Cocktail Special</div>
-              </div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-beige-tint text-espresso text-[10px] px-2 py-0.5 rounded font-bold uppercase">Cocktail Ready</span>
-                <span class="bg-forest-soft text-forest text-[10px] px-2 py-0.5 rounded font-bold uppercase">Under ₹1,999</span>
-              </div>
-              <h3 class="font-head text-lg text-espresso font-bold">The Chandni Metallic Mule</h3>
-              <p class="text-xs text-warm-muted mt-0.5">Silver Zari • Cushioned Slip-On Silhouette</p>
-              <div class="flex items-center gap-2 mt-2">
-                <span class="text-xs font-bold text-espresso">★ 4.8</span>
-                <span class="text-xs text-warm-muted">(520+ reviews)</span>
-                <span class="text-forest text-xs font-bold ml-auto">Comfort: 9.8/10</span>
-              </div>
-              <div class="flex items-baseline gap-2 mt-3">
-                <span class="font-head text-xl text-espresso font-bold">₹1,699</span>
-                <span class="text-xs text-warm-muted line-through">₹2,399</span>
-                <span class="text-xs text-forest font-bold">29% OFF</span>
-              </div>
-              <div class="mt-4">
-                <span class="text-[11px] font-head text-warm-muted uppercase font-bold block mb-1.5">Select Euro Size:</span>
-                <div class="flex items-center gap-1.5 size-chips">
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">36</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">37</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">38</button>
-                  <button class="w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected" onclick="selectSize(this)" type="button">39</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">40</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">41</button>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 pt-3">
-              <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2" onclick="quickAddToCart('The Chandni Metallic Mule', 1699)" type="button">
-                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- CARD 6 -->
-          <div class="product-item group bg-beige-card rounded-2xl p-4 border border-beige-border card-hover flex flex-col justify-between" data-category="wedges">
-            <div>
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E8DDD0] mb-4 flex items-center justify-center p-2">
-                <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="The Apsara Mirror Wedge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Id0q5Zp2iL27MhEzmet8oaY1um0NeM14H7xE06gudeA_iAvx-I01YSYV7dYpCrPjO2ZrKDgmK7iZ7TQTf25noc7QLw8c6U1SEkm9SCMP06rYKf_Yl29ppvJMaMkT5cBJkWxT-xhAQ_0hZTl_KLI5nNd0YTGVVNIWoakM8qhszEe5WsTDWdBlCeFha9HjcH73IOAoRj9Qej_0BOhOhYtCkywva6yOi8TW35Aso2BP" />
-                <div class="absolute top-3 left-3 bg-terracotta text-white font-head text-[10px] px-2.5 py-1 rounded-md uppercase font-bold tracking-wider">Sangeet Essential</div>
-              </div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-beige-tint text-espresso text-[10px] px-2 py-0.5 rounded font-bold uppercase">8-Hour Dance Tested</span>
-                <span class="bg-forest-soft text-forest text-[10px] px-2 py-0.5 rounded font-bold uppercase">Mirror Work</span>
-              </div>
-              <h3 class="font-head text-lg text-espresso font-bold">The Apsara Mirror Wedge</h3>
-              <p class="text-xs text-warm-muted mt-0.5">Champagne • Cushioned Festive Wedge</p>
-              <div class="flex items-center gap-2 mt-2">
-                <span class="text-xs font-bold text-espresso">★ 5.0</span>
-                <span class="text-xs text-warm-muted">(780+ reviews)</span>
-                <span class="text-forest text-xs font-bold ml-auto">Comfort: 10/10</span>
-              </div>
-              <div class="flex items-baseline gap-2 mt-3">
-                <span class="font-head text-xl text-espresso font-bold">₹2,499</span>
-                <span class="text-xs text-warm-muted line-through">₹3,699</span>
-                <span class="text-xs text-forest font-bold">32% OFF</span>
-              </div>
-              <div class="mt-4">
-                <span class="text-[11px] font-head text-warm-muted uppercase font-bold block mb-1.5">Select Euro Size:</span>
-                <div class="flex items-center gap-1.5 size-chips">
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">36</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">37</button>
-                  <button class="w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected" onclick="selectSize(this)" type="button">38</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">39</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">40</button>
-                  <button class="w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border" onclick="selectSize(this)" type="button">41</button>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 pt-3">
-              <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl transition-all flex items-center justify-center gap-2" onclick="quickAddToCart('The Apsara Mirror Wedge', 2499)" type="button">
-                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-                <span>Add to Cart</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: BESPOKE "OUR STORY" ATELIER SHOWCASE & HOVER-CLEAR TESTIMONIALS -->
-    <section class="w-full bg-beige-card py-16 lg:py-24 border-b border-beige-border" id="our-story">
-      <div class="max-w-[1400px] mx-auto px-5 md:px-12">
-        
-        <!-- Editorial "Our Story" Section -->
-        <div class="bg-beige-bg rounded-3xl p-6 sm:p-10 lg:p-14 mb-20 border border-beige-border ambient-shadow">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            <!-- Left: Arch-Framed Agra Karigar Workshop Photography -->
-            <div class="lg:col-span-5 flex justify-center">
-              <div class="relative w-full max-w-md bg-beige-card rounded-t-[140px] rounded-b-2xl p-3 border-2 border-terracotta/40 shadow-md">
-                <div class="rounded-t-[130px] rounded-b-xl overflow-hidden aspect-[4/4.6]">
-                  <img
-                    class="w-full h-full object-cover"
-                    alt="Artisan hands in Agra workshop delicately sewing gold metallic zari thread and glass beads onto champagne satin"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_JHLxMWsDglyCiwOBMuY5WYYDLO9OzhkecfhE_Sy3EG0FtBlx-9qs-r7x3-UwqK5KMBjIiP96_Luu8hT-XY-UDnzaZlWuwteaIsujOOPTQCEaGYGM_fyMPaoeb83zU3XqamuaCzoFT1fj3zYLa_lKfeaQ4sjQhYMxAGunM_fIINYVs4VkY8M5EQX8IDJy6Djn4ikLx1w5UO_vwzmccvkCWxqmUVCkoyRvUCQUuDX7"
-                  />
-                </div>
-                <div class="mt-3 px-3 py-2 flex items-center justify-between text-xs">
-                  <span class="font-head font-bold text-espresso">Ustad Harish Ji &amp; Karigar Guild</span>
-                  <span class="text-terracotta font-semibold">Agra &amp; Jaipur</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right: Authentic Heritage Craft Story -->
-            <div class="lg:col-span-7 space-y-6">
-              <h2 class="font-head text-3xl sm:text-4xl lg:text-[42px] font-bold text-espresso leading-tight">
-                14 Hours of Hand Zardozi. Engineered for 8-Hour Sangeets.
-              </h2>
-              <p class="text-sm sm:text-base text-warm-muted leading-relaxed">
-                Every wedding season, we watched brides, sisters, and mothers slip out of their painful festive shoes under the dinner table within an hour. Traditional juttis had intricate zardozi art but rock-hard leather soles; Western heels pinched broader Indian forefeet.
-              </p>
-              <p class="text-sm sm:text-base text-warm-muted leading-relaxed">
-                We spent 18 months inside third-generation Jaipur and Agra workshops re-engineering the Indian festive shoe from the inside out—pairing hand-strung seed pearls and pure metallic zari with a 6mm medical-grade memory foam core and silk-velvet strap linings that never bite.
-              </p>
-
-              <!-- 3 Atelier Pillars -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                <div class="bg-beige-card p-4 rounded-2xl border border-beige-border">
-                  <div class="font-head text-2xl font-bold text-terracotta">14 Hrs</div>
-                  <p class="text-xs text-warm-muted mt-1">Individual hand needlework by generational karigars</p>
-                </div>
-                <div class="bg-beige-card p-4 rounded-2xl border border-beige-border">
-                  <div class="font-head text-2xl font-bold text-forest">6mm</div>
-                  <p class="text-xs text-warm-muted mt-1">Dual-density Ortho-Plush™ memory foam footbed</p>
-                </div>
-                <div class="bg-beige-card p-4 rounded-2xl border border-beige-border">
-                  <div class="font-head text-2xl font-bold text-espresso">Zero Bites</div>
-                  <p class="text-xs text-warm-muted mt-1">Rolled vegan-suede edges with hidden heel pillows</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Real Celebrations Grid (Whole Outfit + Footwear Visible, Text Clears on Hover) -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-          <div class="space-y-2">
-            <h2 class="font-head text-3xl sm:text-4xl font-bold text-espresso">Zero Bites. 8+ Hours. Real Stories.</h2>
-            <p class="text-sm sm:text-base text-warm-muted max-w-xl">
-              Hover over any celebration card to clear the text and inspect the full outfit and footwear in clarity.
-            </p>
-          </div>
-          <span class="bg-forest-soft text-forest font-head text-xs font-bold px-4 py-2 rounded-full">✓ Hover Cards to Inspect Footwear</span>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Testimonial 1: Ananya S. -->
-          <div class="group bg-beige-bg rounded-2xl overflow-hidden border border-beige-border card-hover flex flex-col cursor-pointer">
-            <div class="relative aspect-[9/14] bg-beige-tint overflow-hidden">
-              <img
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Bride lifting lehenga skirt to reveal her champagne gold Noor zari heels"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4bO_ClJ9kLVOudmetn7_UVvotsd_N8fCPojT0UWXK67_PSaIsf8t9aI42JPOlnA0LHf3AzKNdZpu9N39tPbYytsB4PxHxIXKt2iFq1EsNRDwo-XOFLIkZQMbmGM0ozP4YKOgPvoe8gBq3mpH5a91t_NgENtYsLtuw6s-TYLkUAIWLTWhb_5xghdpYaLzb3NMTjsrqvnw7OrA3K2siKf-ZPR5WrUfHAY-yuY7XYVK-"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/20 to-black/25 flex flex-col justify-between p-4 transition-opacity duration-300 opacity-100 group-hover:opacity-0 pointer-events-none">
-                <span class="bg-beige-card/95 text-espresso font-head text-[10px] uppercase font-bold px-2.5 py-1 rounded-full w-max">Udaipur Palace Sangeet</span>
-                <p class="text-xs text-white leading-snug font-medium">
-                  "Danced for 8.5 hours straight at my Sangeet. Zero shoe bites, zero barefoot walks to the car!"
-                </p>
-              </div>
-            </div>
-            <div class="p-4 flex items-center justify-between bg-beige-bg">
-              <div>
-                <h4 class="font-head text-sm text-espresso font-bold">Ananya S., 27</h4>
-                <p class="text-[11px] text-warm-muted">Mumbai • Verified Bride</p>
-              </div>
-              <span class="text-terracotta font-bold text-xs">The Noor Zari</span>
-            </div>
-          </div>
-
-          <!-- Testimonial 2: Dr. Rhea K. -->
-          <div class="group bg-beige-bg rounded-2xl overflow-hidden border border-beige-border card-hover flex flex-col cursor-pointer">
-            <div class="relative aspect-[9/14] bg-beige-tint overflow-hidden">
-              <img
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Woman in pastel green anarkali showing the fit of her champagne embroidered sandals"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQhZRLsreqR3CiJoWou4iemtla-V7WJhAeWURPiDcBjfY9Jr5lzK6YMSdR3lCyk2fFZDv-_YcrkUORVmbsaHpP6lkwzn6FZXP5zaktWPrlifjucBdEc1KgkmOLQtzju30RZO_zPvD0nW5dWUENU_h0bSBy1XObo6fWs43uF0EDb8jSIE8nbJcGuLaO7nGHe86xp1zqiHjxmuwPQggUPTxgQPn90CNHCxbRTGvXKr-W"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/20 to-black/25 flex flex-col justify-between p-4 transition-opacity duration-300 opacity-100 group-hover:opacity-0 pointer-events-none">
-                <span class="bg-beige-card/95 text-espresso font-head text-[10px] uppercase font-bold px-2.5 py-1 rounded-full w-max">Bengaluru Reception</span>
-                <p class="text-xs text-white leading-snug font-medium">
-                  "Finally a brand that truly understands broad Indian feet. The memory foam insole feels like clouds."
-                </p>
-              </div>
-            </div>
-            <div class="p-4 flex items-center justify-between bg-beige-bg">
-              <div>
-                <h4 class="font-head text-sm text-espresso font-bold">Dr. Rhea K., 31</h4>
-                <p class="text-[11px] text-warm-muted">Bengaluru • Verified Buyer</p>
-              </div>
-              <span class="text-terracotta font-bold text-xs">The Sitara Pearl</span>
-            </div>
-          </div>
-
-          <!-- Testimonial 3: Meera P. -->
-          <div class="group bg-beige-bg rounded-2xl overflow-hidden border border-beige-border card-hover flex flex-col cursor-pointer">
-            <div class="relative aspect-[9/14] bg-beige-tint overflow-hidden">
-              <img
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Indian bridesmaid twirling in yellow lehenga gesturing down at her gold heels on stone terrace"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZM3_MD5QQB-3hmBu6F3pSvKwWnd0zf_d31oWVHMzOPB9cc4m5B7xM6GAuhOUE-EnLDDnoayy_ma3DwuygDfx7sOHHGJO4yn7a_fRbR1TZHiJiUDoO0l7vER8FVxXkDJX3UUvXO5u52XOJVyYg_8Zl3NL-mM4gjwXA2WCrZ0vH61LGtUaHYpQnMEcAvAOWnwfxevmg8aaCSd0HT9H22yPkO3u6uFJOcx_xNSath0o_"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/20 to-black/25 flex flex-col justify-between p-4 transition-opacity duration-300 opacity-100 group-hover:opacity-0 pointer-events-none">
-                <span class="bg-beige-card/95 text-espresso font-head text-[10px] uppercase font-bold px-2.5 py-1 rounded-full w-max">Delhi Wedding Weekend</span>
-                <p class="text-xs text-white leading-snug font-medium">
-                  "Styled 'The Noor' with my haldi lehenga and the next night with a cocktail gown. 10/10 versatility."
-                </p>
-              </div>
-            </div>
-            <div class="p-4 flex items-center justify-between bg-beige-bg">
-              <div>
-                <h4 class="font-head text-sm text-espresso font-bold">Meera P., 29</h4>
-                <p class="text-[11px] text-warm-muted">New Delhi • Verified Bridesmaid</p>
-              </div>
-              <span class="text-terracotta font-bold text-xs">The Noor Zari</span>
-            </div>
-          </div>
-
-          <!-- Testimonial 4: Tanvi M. from Hyderabad (Whole Picture of Woman Wearing Outfit + Heels) -->
-          <div class="group bg-beige-bg rounded-2xl overflow-hidden border border-beige-border card-hover flex flex-col cursor-pointer">
-            <div class="relative aspect-[9/14] bg-beige-tint overflow-hidden">
-              <img
-                class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
-                alt="Tanvi M. from Hyderabad wearing festive outfit and embroidered heels on the celebration floor"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL2Pvi-ZCll2tNJfOdpzWRaDuhx70GrzJIZ067TDF3AcWV0S6rOXAsMu1HySo2G49LboxMukmNKtyilA3zqkL6C4ftBw8mfvvemByJHjSf8xe2gSwmTzjr2sCQHPEywdEN8h3MZCb5hRYfxdtH2osJJKacyBUfz5r3v5DUubJVUHpD5xwd301ZQeoZ1H6N6o-JWaJRrBIGdYQLln3BTSI9AjYRz2nlsbBKMdSu1GFD"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/20 to-black/25 flex flex-col justify-between p-4 transition-opacity duration-300 opacity-100 group-hover:opacity-0 pointer-events-none">
-                <span class="bg-beige-card/95 text-espresso font-head text-[10px] uppercase font-bold px-2.5 py-1 rounded-full w-max">Hyderabad Mehendi</span>
-                <p class="text-xs text-white leading-snug font-medium">
-                  "No band-aids required in my purse for the first time in 5 wedding seasons. Genuinely zero skin friction."
-                </p>
-              </div>
-            </div>
-            <div class="p-4 flex items-center justify-between bg-beige-bg">
-              <div>
-                <h4 class="font-head text-sm text-espresso font-bold">Tanvi M., 26</h4>
-                <p class="text-[11px] text-warm-muted">Hyderabad • Verified Buyer</p>
-              </div>
-              <span class="text-terracotta font-bold text-xs">The Mehr Velvet</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =====================================================================
-       SLIDE-OUT CART DRAWER
-       ===================================================================== -->
-  <div class="fixed inset-0 bg-espresso/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="cart-drawer-backdrop" onclick="toggleCartDrawer(false)"></div>
-
-  <aside class="fixed top-0 right-0 h-full w-full max-w-md bg-beige-card z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between border-l border-beige-border" id="cart-drawer-panel">
-    <!-- Drawer Header -->
-    <div class="p-5 bg-beige-bg border-b border-beige-border flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-outlined text-terracotta">shopping_bag</span>
-        <h3 class="font-head text-lg text-espresso font-bold">Your Cart</h3>
-        <span class="bg-terracotta text-white text-xs font-bold px-2.5 py-0.5 rounded-full" id="cart-item-count-badge">1 Pair</span>
-      </div>
-      <button aria-label="Close cart" class="w-8 h-8 rounded-full bg-beige-tint flex items-center justify-center text-espresso hover:bg-terracotta hover:text-white transition-colors" onclick="toggleCartDrawer(false)" type="button">
-        <span class="material-symbols-outlined text-lg">close</span>
-      </button>
-    </div>
-
-    <!-- Free Shipping Banner -->
-    <div class="px-5 py-3 bg-forest-soft border-b border-forest/20">
-      <div class="flex items-center justify-between text-xs font-bold text-forest mb-1">
-        <span>🎉 FREE Express Shipping + Velvet Heel Cushions Unlocked</span>
-        <span>100%</span>
-      </div>
-      <div class="w-full bg-white h-1.5 rounded-full overflow-hidden">
-        <div class="bg-forest h-full w-full"></div>
-      </div>
-    </div>
-
-    <!-- Cart Items Scroll Area -->
-    <div class="flex-1 overflow-y-auto p-5 space-y-4">
-      <div id="cart-items-list" class="space-y-3"></div>
-
-      <!-- Pincode Check -->
-      <div class="p-3.5 bg-beige-bg rounded-xl border border-beige-border space-y-2">
-        <span class="font-head text-xs text-espresso font-bold uppercase block">Check Delivery Date by Pincode</span>
-        <div class="flex gap-2">
-          <input class="flex-1 bg-beige-card px-3 py-2 rounded-lg text-xs border border-beige-border focus:outline-none focus:border-terracotta" id="pincode-input" maxlength="6" placeholder="Enter 6-digit Pincode" type="text" value="400050" />
-          <button class="bg-terracotta text-white px-4 py-2 rounded-lg font-head text-xs font-semibold uppercase" onclick="checkPincode()" type="button">Check</button>
-        </div>
-        <p class="text-xs text-forest font-semibold" id="pincode-status">✓ Free Express 48-Hour Delivery &amp; COD Available</p>
-      </div>
-    </div>
-
-    <!-- Drawer Footer -->
-    <div class="p-5 bg-beige-bg border-t border-beige-border space-y-3">
-      <div class="space-y-1 text-xs">
-        <div class="flex justify-between text-warm-muted">
-          <span>Subtotal</span>
-          <span id="drawer-subtotal">₹1,899</span>
-        </div>
-        <div class="flex justify-between text-forest font-semibold">
-          <span>UPI Instant Prepaid Discount</span>
-          <span>- ₹100</span>
-        </div>
-        <div class="flex justify-between font-head text-base text-espresso font-bold pt-2 border-t border-beige-border">
-          <span>Total Payable</span>
-          <span id="drawer-grand-total">₹1,799</span>
-        </div>
-      </div>
-      <button class="w-full bg-terracotta hover:bg-terracotta-dark text-white py-4 rounded-xl font-head text-xs font-semibold uppercase tracking-wider shadow-md flex items-center justify-center gap-2 transition-all" onclick="openUpiQrModal()" type="button">
-        <span class="material-symbols-outlined text-lg">qr_code_scanner</span>
-        <span>Instant 1-Click UPI Checkout</span>
-      </button>
-    </div>
-  </aside>
-
-  <!-- =====================================================================
-       FAKE UPI QR CODE SCANNER MODAL
-       ===================================================================== -->
-  <div id="upi-qr-modal" class="fixed inset-0 bg-espresso/75 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-    <div class="bg-beige-card w-full max-w-sm rounded-3xl p-6 border-2 border-terracotta shadow-2xl relative text-center">
-      <button onclick="closeUpiQrModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-beige-tint flex items-center justify-center text-espresso hover:bg-terracotta hover:text-white transition-colors" type="button">✕</button>
-
-      <div id="qr-scan-view" class="space-y-4">
-        <div class="inline-flex items-center gap-1.5 bg-forest-soft text-forest px-3 py-1 rounded-full text-[11px] font-head font-bold uppercase">
-          <span class="material-symbols-outlined text-sm">verified_user</span>
-          <span>Verified UPI Merchant</span>
-        </div>
-
-        <div>
-          <h3 class="font-head text-xl font-bold text-espresso">Scan &amp; Pay via Any UPI App</h3>
-          <p class="text-xs text-warm-muted mt-0.5">Merchant: <strong class="text-espresso">velino.atelier@okaxis</strong></p>
-        </div>
-
-        <div class="relative w-56 h-56 mx-auto bg-white p-4 rounded-2xl border-2 border-beige-border shadow-inner flex items-center justify-center overflow-hidden">
-          <div class="qr-scanner-line"></div>
-          <svg viewBox="0 0 120 120" class="w-full h-full text-espresso" fill="currentColor">
-            <path d="M5,5 h30 v30 h-30 z M10,10 v20 h20 v-20 z M15,15 h10 v10 h-10 z" />
-            <path d="M85,5 h30 v30 h-30 z M90,10 v20 h20 v-20 z M95,15 h10 v10 h-10 z" />
-            <path d="M5,85 h30 v30 h-30 z M10,90 v20 h20 v-20 z M15,95 h10 v10 h-10 z" />
-            <rect x="42" y="8" width="6" height="6" /><rect x="54" y="8" width="6" height="12" /><rect x="66" y="8" width="12" height="6" />
-            <rect x="42" y="20" width="6" height="12" /><rect x="66" y="20" width="6" height="6" /><rect x="74" y="26" width="6" height="6" />
-            <rect x="8" y="42" width="12" height="6" /><rect x="26" y="42" width="6" height="12" /><rect x="42" y="40" width="8" height="8" />
-            <rect x="70" y="40" width="8" height="8" /><rect x="86" y="42" width="12" height="6" /><rect x="104" y="42" width="8" height="12" />
-            <rect x="8" y="56" width="6" height="14" /><rect x="20" y="60" width="12" height="6" /><rect x="90" y="56" width="6" height="16" />
-            <rect x="102" y="62" width="10" height="6" /><rect x="8" y="74" width="18" height="6" /><rect x="34" y="72" width="8" height="8" />
-            <rect x="44" y="84" width="6" height="12" /><rect x="56" y="80" width="12" height="6" /><rect x="74" y="84" width="6" height="14" />
-            <rect x="86" y="82" width="14" height="6" /><rect x="106" y="84" width="6" height="12" />
-            <rect x="42" y="102" width="14" height="6" /><rect x="62" y="96" width="6" height="16" /><rect x="84" y="96" width="12" height="12" />
-            <rect x="102" y="102" width="10" height="10" />
-            <rect x="48" y="48" width="24" height="24" rx="4" fill="#B85038" />
-            <text x="60" y="65" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Poppins, sans-serif" font-weight="bold">V</text>
-          </svg>
-        </div>
-
-        <div class="bg-beige-bg p-3 rounded-xl border border-beige-border flex items-center justify-between text-xs">
-          <span class="text-warm-muted font-medium">Amount Payable (₹100 Off):</span>
-          <span class="font-head text-lg font-bold text-forest" id="qr-amount-text">₹1,799</span>
-        </div>
-
-        <div class="flex items-center justify-center gap-2 text-[11px] font-head font-semibold text-warm-muted">
-          <span class="px-2 py-1 bg-beige-bg rounded border border-beige-border">GPay</span>
-          <span class="px-2 py-1 bg-beige-bg rounded border border-beige-border">PhonePe</span>
-          <span class="px-2 py-1 bg-beige-bg rounded border border-beige-border">Paytm</span>
-          <span class="px-2 py-1 bg-beige-bg rounded border border-beige-border">BHIM</span>
-        </div>
-
-        <button onclick="simulateQrPaymentSuccess()" type="button" class="w-full bg-forest hover:bg-forest-dark text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl shadow-md transition-all">
-          ✓ I Have Scanned &amp; Paid
-        </button>
-      </div>
-
-      <div id="qr-success-view" class="hidden py-6 space-y-4">
-        <div class="w-16 h-16 rounded-full bg-forest text-white flex items-center justify-center mx-auto text-3xl font-bold shadow-lg">✓</div>
-        <h3 class="font-head text-2xl font-bold text-espresso">Payment Successful!</h3>
-        <p class="text-xs text-warm-muted leading-relaxed">
-          Order <strong class="text-espresso">#VEL-89241</strong> is confirmed. Your handcrafted pair is being prepared at our Jaipur atelier for express dispatch.
-        </p>
-        <div class="bg-forest-soft text-forest p-3 rounded-xl text-xs font-bold">
-          WhatsApp live tracking activated on your profile
-        </div>
-        <button onclick="closeUpiQrModal()" type="button" class="w-full bg-terracotta text-white font-head text-xs font-semibold uppercase tracking-wider py-3.5 rounded-xl">
-          Done
-        </button>
-      </div>
+    <a class="foot-logo" href="#home" aria-label="Velino home"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg></a>
+    <div class="foot-base">
+      <span>Confidence without compromise.</span>
+      <span>&copy; 2026 Velino. Prototype by Team SNAPS.</span>
     </div>
   </div>
+</footer>
 
-  <!-- =====================================================================
-       PROFILE MODAL
-       ===================================================================== -->
-  <div id="profile-modal" class="fixed inset-0 bg-espresso/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-    <div class="bg-beige-card w-full max-w-md rounded-3xl p-6 sm:p-8 border border-beige-border shadow-2xl relative">
-      <button onclick="toggleProfileModal(false)" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-beige-tint flex items-center justify-center text-espresso hover:bg-terracotta hover:text-white transition-colors" type="button">✕</button>
-      <div class="flex items-center gap-3.5 mb-6">
-        <div class="w-12 h-12 rounded-full bg-terracotta text-white font-head font-bold text-lg flex items-center justify-center">AS</div>
-        <div>
-          <h3 class="font-head text-lg font-bold text-espresso">Ananya Sharma</h3>
-          <p class="text-xs text-forest font-semibold">✓ Velvet Circle Member • Saved Size: EU 38</p>
-        </div>
-      </div>
-      <div class="space-y-3 text-xs">
-        <div class="p-3.5 rounded-xl bg-beige-bg border border-beige-border flex justify-between items-center">
-          <div>
-            <span class="font-head font-bold text-espresso block">Active Order #VEL-89241</span>
-            <span class="text-warm-muted">The Noor Zari Block Heel • Dispatched from Jaipur</span>
-          </div>
-          <span class="bg-forest-soft text-forest font-bold px-2.5 py-1 rounded-full">In Transit</span>
-        </div>
-        <div class="p-3.5 rounded-xl bg-beige-bg border border-beige-border flex justify-between items-center">
-          <span class="font-head font-semibold text-espresso">Saved Foot Profile</span>
-          <span class="text-terracotta font-bold">Broad Indian Fit</span>
-        </div>
-      </div>
-      <button onclick="toggleProfileModal(false)" class="mt-6 w-full bg-terracotta text-white font-head text-xs font-semibold uppercase py-3 rounded-xl hover:bg-terracotta-dark transition-colors" type="button">
-        Continue Shopping
-      </button>
-    </div>
+<dialog id="search-dlg" class="dlg dlg--top" aria-label="Search">
+  <div class="wrap search-box">
+    <form class="search-bar" id="search-form" role="search">
+      <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+      <label class="sr-only" for="search-q">Search Velino</label>
+      <input id="search-q" type="search" placeholder="Search for heels, pearls, weddings" autocomplete="off">
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Close search"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </form>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
   </div>
+</dialog>
 
-  <!-- =====================================================================
-       FOOTER WITH CUSTOM VELINO LOGO
-       ===================================================================== -->
-  <footer class="w-full bg-beige-tint text-espresso pt-14 pb-10 border-t border-beige-border">
-    <div class="max-w-[1400px] mx-auto px-5 md:px-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pb-12 border-b border-beige-border">
-        <div class="flex items-center gap-3.5 p-4 bg-beige-card rounded-2xl border border-beige-border">
-          <span class="material-symbols-outlined text-forest text-[30px]">verified</span>
-          <div>
-            <div class="font-head text-sm text-espresso font-bold">Zero Shoe Bites</div>
-            <div class="text-xs text-warm-muted">Guaranteed cushion comfort</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3.5 p-4 bg-beige-card rounded-2xl border border-beige-border">
-          <span class="material-symbols-outlined text-terracotta text-[30px]">handyman</span>
-          <div>
-            <div class="font-head text-sm text-espresso font-bold">Master Artisans</div>
-            <div class="text-xs text-warm-muted">Handcrafted in Jaipur &amp; Agra</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3.5 p-4 bg-beige-card rounded-2xl border border-beige-border">
-          <span class="material-symbols-outlined text-terracotta text-[30px]">local_shipping</span>
-          <div>
-            <div class="font-head text-sm text-espresso font-bold">Express Shipping</div>
-            <div class="text-xs text-warm-muted">Free delivery across India</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3.5 p-4 bg-beige-card rounded-2xl border border-beige-border">
-          <span class="material-symbols-outlined text-forest text-[30px]">published_with_changes</span>
-          <div>
-            <div class="font-head text-sm text-espresso font-bold">7-Day Exchange</div>
-            <div class="text-xs text-warm-muted">Instant doorstep size swaps</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-4">
-          <svg class="h-7 w-auto text-espresso" viewBox="0 0 330 95" fill="currentColor">
-            <polygon points="4,22 28,22 57,74 45,92" />
-            <polygon points="62,22 86,22 62,65 62,22" />
-            <path d="M82,63 L128,63 L128,58 L99,58 C100,50 106,46 114,46 C122,46 127,50 128,58 L147,58 C147,43 134,34 114,34 C94,34 81,46 81,63 C81,81 95,92 115,92 C131,92 142,84 146,73 L128,73 C125,78 121,80 115,80 C105,80 99,75 98,67 L81,67 Z" />
-            <polygon points="156,14 176,4 176,90 156,90" />
-            <circle cx="198" cy="18" r="10" />
-            <path d="M188,35 L196,35 C204,35 208,39 208,47 L208,90 L188,90 Z" />
-            <path d="M218,35 L236,35 L236,43 C240,37 247,34 256,34 C270,34 279,43 279,58 L279,90 L259,90 L259,61 C259,52 254,47 247,47 C240,47 236,52 236,61 L236,90 L218,90 Z" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M304,34 C321,34 330,46 330,63 C330,80 321,92 304,92 C287,92 278,80 278,63 C278,46 287,34 304,34 Z M304,48 C296,48 291,54 291,63 C291,72 296,78 304,78 C312,78 317,72 317,63 C317,54 312,48 304,48 Z" />
-          </svg>
-          <span class="text-xs text-warm-muted">Confidence Without Compromise. Handcrafted in India.</span>
-        </div>
-        <div class="text-xs text-warm-muted">© 2026 Velino Luxury Occasion Footwear. All rights reserved.</div>
-      </div>
+<dialog id="menu-dlg" class="dlg dlg--side" aria-label="Menu">
+  <div class="side-inner">
+    <div class="side-head">
+      <a href="#home" aria-label="Velino home"><svg class="logo" aria-hidden="true"><use href="#logo"/></svg></a>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Close menu"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
     </div>
-  </footer>
+    <nav class="side-main" aria-label="Menu">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#new-arrivals">New Arrivals</a>
+      <a href="#about">About</a>
+    </nav>
+    <nav class="side-sub" aria-label="More">
+      <a href="#wishlist">Wishlist</a>
+      <a href="#cart">Bag</a>
+      <a href="#size-guide">Size guide</a>
+      <a href="#shipping-returns">Delivery and exchanges</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+  </div>
+</dialog>
 
-  <!-- =====================================================================
-       COMPLETE INTERACTIVE SCRIPT
-       ===================================================================== -->
-  <script>
-    let cartItems = [
-      { title: "The Noor Zari Block Heel", price: 1899, qty: 1 }
-    ];
+<dialog id="filter-dlg" class="dlg dlg--side" aria-label="Filters">
+  <div class="side-inner">
+    <div class="side-head">
+      <h2 class="side-title">Filters</h2>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Close filters"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="side-scroll" id="filter-dlg-body"></div>
+    <div class="side-foot"><button class="btn btn--block" type="button" data-close-dialog id="filter-dlg-apply">Show styles</button></div>
+  </div>
+</dialog>
 
-    const LOOKBOOK_IMAGES = {
-      lehenga: "https://lh3.googleusercontent.com/aida-public/AB6AXuC4bO_ClJ9kLVOudmetn7_UVvotsd_N8fCPojT0UWXK67_PSaIsf8t9aI42JPOlnA0LHf3AzKNdZpu9N39tPbYytsB4PxHxIXKt2iFq1EsNRDwo-XOFLIkZQMbmGM0ozP4YKOgPvoe8gBq3mpH5a91t_NgENtYsLtuw6s-TYLkUAIWLTWhb_5xghdpYaLzb3NMTjsrqvnw7OrA3K2siKf-ZPR5WrUfHAY-yuY7XYVK-",
-      anarkali: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQhZRLsreqR3CiJoWou4iemtla-V7WJhAeWURPiDcBjfY9Jr5lzK6YMSdR3lCyk2fFZDv-_YcrkUORVmbsaHpP6lkwzn6FZXP5zaktWPrlifjucBdEc1KgkmOLQtzju30RZO_zPvD0nW5dWUENU_h0bSBy1XObo6fWs43uF0EDb8jSIE8nbJcGuLaO7nGHe86xp1zqiHjxmuwPQggUPTxgQPn90CNHCxbRTGvXKr-W",
-      cocktail: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZM3_MD5QQB-3hmBu6F3pSvKwWnd0zf_d31oWVHMzOPB9cc4m5B7xM6GAuhOUE-EnLDDnoayy_ma3DwuygDfx7sOHHGJO4yn7a_fRbR1TZHiJiUDoO0l7vER8FVxXkDJX3UUvXO5u52XOJVyYg_8Zl3NL-mM4gjwXA2WCrZ0vH61LGtUaHYpQnMEcAvAOWnwfxevmg8aaCSd0HT9H22yPkO3u6uFJOcx_xNSath0o_"
-    };
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="sr-only" id="route-status" aria-live="polite"></div>
 
-    // Preload lookbook images so switching is instant
-    Object.values(LOOKBOOK_IMAGES).forEach((url) => {
-      const img = new Image();
-      img.src = url;
-    });
-
-    function setLookbookTab(type, button) {
-      document.querySelectorAll(".lookbook-tab-btn").forEach((btn) => {
-        btn.className = "lookbook-tab-btn bg-beige-card text-espresso border border-beige-border p-4 rounded-2xl text-left hover:border-terracotta transition-all cursor-pointer";
-        const icon = btn.querySelector(".material-symbols-outlined");
-        if (icon) icon.classList.add("text-terracotta");
-        const sub = btn.querySelector(".sub-label");
-        if (sub) sub.className = "sub-label text-[11px] text-warm-muted block mt-0.5";
-      });
-
-      button.className = "lookbook-tab-btn bg-terracotta text-white p-4 rounded-2xl text-left shadow-md transition-all cursor-pointer";
-      const activeIcon = button.querySelector(".material-symbols-outlined");
-      if (activeIcon) activeIcon.classList.remove("text-terracotta");
-      const activeSub = button.querySelector(".sub-label");
-      if (activeSub) activeSub.className = "sub-label text-[11px] opacity-90 block mt-0.5";
-
-      const imgEl = document.getElementById("lookbook-hero-img");
-      if (imgEl && LOOKBOOK_IMAGES[type]) {
-        imgEl.src = LOOKBOOK_IMAGES[type];
-      }
-    }
-
-    function renderCartDrawer() {
-      const listEl = document.getElementById("cart-items-list");
-      const totalCount = cartItems.reduce((sum, i) => sum + i.qty, 0);
-      const subtotal = cartItems.reduce((sum, i) => sum + i.price * i.qty, 0);
-      const grandTotal = Math.max(0, subtotal - 100);
-
-      document.getElementById("cart-item-count-badge").textContent = totalCount + (totalCount === 1 ? " Pair" : " Pairs");
-      document.getElementById("drawer-subtotal").textContent = "₹" + subtotal.toLocaleString("en-IN");
-      document.getElementById("drawer-grand-total").textContent = "₹" + grandTotal.toLocaleString("en-IN");
-      document.getElementById("qr-amount-text").textContent = "₹" + grandTotal.toLocaleString("en-IN");
-
-      if (cartItems.length === 0) {
-        listEl.innerHTML = '<p class="text-xs text-warm-muted text-center py-6">Your cart is empty. Explore our festive collection to add a pair!</p>';
-        return;
-      }
-
-      listEl.innerHTML = cartItems.map((item, index) => `
-        <div class="flex items-center justify-between p-3.5 bg-beige-bg rounded-xl border border-beige-border">
-          <div>
-            <h4 class="font-head text-sm text-espresso font-bold">${item.title}</h4>
-            <p class="text-xs text-warm-muted">Euro 38 • Cushioned Indian Fit</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="flex items-center bg-beige-tint rounded-lg">
-              <button class="w-6 h-6 flex items-center justify-center font-bold text-xs" onclick="updateQty(${index}, -1)" type="button">-</button>
-              <span class="w-6 text-center text-xs font-bold">${item.qty}</span>
-              <button class="w-6 h-6 flex items-center justify-center font-bold text-xs" onclick="updateQty(${index}, 1)" type="button">+</button>
-            </div>
-            <span class="font-head text-sm font-bold text-espresso ml-1">₹${(item.price * item.qty).toLocaleString("en-IN")}</span>
-          </div>
-        </div>
-      `).join("");
-    }
-
-    function updateQty(index, delta) {
-      cartItems[index].qty += delta;
-      if (cartItems[index].qty <= 0) {
-        cartItems.splice(index, 1);
-      }
-      renderCartDrawer();
-    }
-
-    function quickAddToCart(title, price) {
-      const existing = cartItems.find((i) => i.title === title);
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cartItems.push({ title, price, qty: 1 });
-      }
-      renderCartDrawer();
-      showToast(title);
-    }
-
-    function showToast(name) {
-      const toast = document.getElementById("cart-toast");
-      document.getElementById("toast-item-desc").textContent = name + " • Size 38";
-      toast.classList.remove("translate-y-24", "opacity-0", "pointer-events-none");
-      setTimeout(() => {
-        toast.classList.add("translate-y-24", "opacity-0", "pointer-events-none");
-      }, 3000);
-    }
-
-    function toggleCartDrawer(open) {
-      const drawer = document.getElementById("cart-drawer-panel");
-      const backdrop = document.getElementById("cart-drawer-backdrop");
-      if (open) {
-        drawer.classList.remove("translate-x-full");
-        backdrop.classList.remove("opacity-0", "pointer-events-none");
-      } else {
-        drawer.classList.add("translate-x-full");
-        backdrop.classList.add("opacity-0", "pointer-events-none");
-      }
-    }
-
-    function openUpiQrModal() {
-      toggleCartDrawer(false);
-      const modal = document.getElementById("upi-qr-modal");
-      document.getElementById("qr-scan-view").classList.remove("hidden");
-      document.getElementById("qr-success-view").classList.add("hidden");
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    }
-
-    function closeUpiQrModal() {
-      const modal = document.getElementById("upi-qr-modal");
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-    }
-
-    function simulateQrPaymentSuccess() {
-      document.getElementById("qr-scan-view").classList.add("hidden");
-      document.getElementById("qr-success-view").classList.remove("hidden");
-    }
-
-    function toggleProfileModal(open) {
-      const modal = document.getElementById("profile-modal");
-      modal.classList.toggle("hidden", !open);
-      modal.classList.toggle("flex", open);
-    }
-
-    function selectSize(btn) {
-      const parent = btn.closest(".size-chips");
-      parent.querySelectorAll("button").forEach((b) => {
-        b.className = "w-9 h-9 rounded-lg bg-beige-bg text-espresso text-xs font-bold border border-beige-border";
-      });
-      btn.className = "w-9 h-9 rounded-lg bg-terracotta text-white text-xs font-bold selected";
-    }
-
-    function filterCatalog(category, button) {
-      document.querySelectorAll(".catalog-filter-btn").forEach((btn) => {
-        btn.className = "catalog-filter-btn bg-beige-card border border-beige-border text-espresso px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider hover:border-terracotta transition-all inline-flex items-center gap-2";
-      });
-      button.className = "catalog-filter-btn bg-terracotta text-white px-5 py-3 rounded-full font-head text-xs font-semibold uppercase tracking-wider transition-all inline-flex items-center gap-2 shadow-sm";
-
-      document.querySelectorAll(".product-item").forEach((item) => {
-        if (category === "all" || item.getAttribute("data-category").includes(category)) {
-          item.classList.remove("hidden");
-        } else {
-          item.classList.add("hidden");
-        }
-      });
-    }
-
-    function checkPincode() {
-      const pin = document.getElementById("pincode-input").value.trim();
-      const status = document.getElementById("pincode-status");
-      if (/^\d{6}$/.test(pin)) {
-        status.textContent = "✓ Free Express 48-Hour Delivery & COD Available in " + pin;
-        status.className = "text-xs text-forest font-semibold";
-      } else {
-        status.textContent = "Please enter a valid 6-digit Indian pincode.";
-        status.className = "text-xs text-terracotta font-semibold";
-      }
-    }
-
-    renderCartDrawer();
-  </script>
+<script src="js/catalog.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
